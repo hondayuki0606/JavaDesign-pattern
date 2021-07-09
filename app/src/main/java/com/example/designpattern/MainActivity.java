@@ -6,9 +6,9 @@ import android.os.Bundle;
 
 import com.example.designpattern.adapter.transfer.Print;
 import com.example.designpattern.adapter.transfer.PrintBanner;
-import com.example.designpattern.templatemethod.AbstractDisplay;
-import com.example.designpattern.templatemethod.CharDisplay;
-import com.example.designpattern.templatemethod.StringDisplay;
+import com.example.designpattern.factorymethod.framework.Factory;
+import com.example.designpattern.factorymethod.framework.Product;
+import com.example.designpattern.factorymethod.idcard.IDCardFactory;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -28,5 +28,13 @@ public class MainActivity extends AppCompatActivity {
 //        AbstractDisplay d3 = new StringDisplay("");
 //        d1.print();
 //        d2.print();
+
+        Factory factory = new IDCardFactory();
+        Product card1 = factory.create("yuuki");
+        Product card2 = factory.create("戸村");
+        Product card3 = factory.create("佐藤花子");
+        card1.use();
+        card2.use();
+        card3.use();
     }
 }
