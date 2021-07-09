@@ -6,6 +6,9 @@ import android.os.Bundle;
 
 import com.example.designpattern.adapter.transfer.Print;
 import com.example.designpattern.adapter.transfer.PrintBanner;
+import com.example.designpattern.templatemethod.AbstractDisplay;
+import com.example.designpattern.templatemethod.CharDisplay;
+import com.example.designpattern.templatemethod.StringDisplay;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -18,5 +21,12 @@ public class MainActivity extends AppCompatActivity {
         Print p = new PrintBanner("Hello");
         p.printStrong();
         p.printWeak();
+
+        // テンプレートメソッド
+//        AbstractDisplay d1 = new CharDisplay('H');
+//        AbstractDisplay d2 = new StringDisplay("");
+//        AbstractDisplay d3 = new StringDisplay("");
+//        d1.print();
+//        d2.print();
     }
 }
