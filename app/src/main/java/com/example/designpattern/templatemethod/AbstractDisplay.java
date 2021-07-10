@@ -1,6 +1,6 @@
 package com.example.designpattern.templatemethod;
 
-abstract public class AbstractDisplay {
+ public abstract class AbstractDisplay {
 
     // 問題3−3 アクセス権限をprotectedにする
     // 問題3−4 displayの実体メソッドを記述しいてるため

@@ -1,6 +1,6 @@
 package com.example.designpattern.templatemethod;
 
-public class StringDisplay {
+public class StringDisplay extends AbstractDisplay{
     private String string;
     private int width;
     public StringDisplay(String string){
@@ -8,7 +8,7 @@ public class StringDisplay {
         this.width = string.getBytes().length;
 
     }
-    public void opne() {
+    public void open() {
         printLine();
     }
     public void print() {

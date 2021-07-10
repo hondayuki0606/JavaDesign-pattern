@@ -28,21 +28,7 @@ public class MainActivity extends AppCompatActivity {
         p.printStrong();
         p.printWeak();
 
-//        // テンプレートメソッド
-//        AbstractDisplay d1 = new CharDisplay('H');
-//        AbstractDisplay d2 = new StringDisplay("");
-//        AbstractDisplay d3 = new StringDisplay("");
-//        d1.print();
-//        d2.print();
 
-        Factory factory = new IDCardFactory();
-        Product card1 = factory.create("yuuki");
-        Product card2 = factory.create("戸村");
-        Product card3 = factory.create("佐藤花子");
-        card1.use();
-        card2.use();
-        card3.use();
-        List owners = ((IDCardFactory) factory).getOwners();
 
     }
 }
