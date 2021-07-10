@@ -7,14 +7,14 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class IDCardFactory extends Factory {
-    private List owner = new ArrayList<>();
+    private List owners = new ArrayList<>();
     protected Product createProduct(String owner){
         return new IDCard(owner);
     }
     protected void registerProduct(Product product){
-        owner.add(((IDCard)product).getOwner());
+        owners.add(((IDCard)product).getOwner());
     }
-    public List getOwner(){
-        return owner;
+    public List getOwners(){
+        return owners;
     }
 }

@@ -10,6 +10,9 @@ import com.example.designpattern.factorymethod.framework.Factory;
 import com.example.designpattern.factorymethod.framework.Product;
 import com.example.designpattern.factorymethod.idcard.IDCardFactory;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -36,5 +39,7 @@ public class MainActivity extends AppCompatActivity {
         card1.use();
         card2.use();
         card3.use();
+        List owners = ((IDCardFactory) factory).getOwners();
+
     }
 }
