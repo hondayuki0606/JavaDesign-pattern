@@ -9,6 +9,9 @@ import com.example.designpattern.adapter.transfer.PrintBanner;
 import com.example.designpattern.factorymethod.framework.Factory;
 import com.example.designpattern.factorymethod.framework.Product;
 import com.example.designpattern.factorymethod.idcard.IDCardFactory;
+import com.example.designpattern.templatemethod.AbstractDisplay;
+import com.example.designpattern.templatemethod.CharDisplay;
+import com.example.designpattern.templatemethod.StringDisplay;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -25,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
         p.printStrong();
         p.printWeak();
 
-        // テンプレートメソッド
+//        // テンプレートメソッド
 //        AbstractDisplay d1 = new CharDisplay('H');
 //        AbstractDisplay d2 = new StringDisplay("");
 //        AbstractDisplay d3 = new StringDisplay("");
