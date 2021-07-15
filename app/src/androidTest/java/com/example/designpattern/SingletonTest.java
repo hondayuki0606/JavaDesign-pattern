@@ -9,6 +9,8 @@ import com.example.designpattern.factorymethod.framework.Factory;
 import com.example.designpattern.factorymethod.framework.Product;
 import com.example.designpattern.factorymethod.idcard.IDCardFactory;
 import com.example.designpattern.singleton.Singleton;
+import com.example.designpattern.singleton.TicketMaker;
+import com.example.designpattern.singleton.Triple;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -36,5 +38,24 @@ public class SingletonTest {
         }
         System.out.println("End");
         assertEquals(obj1, obj2);
+    }
+    @Test
+    public void countup () {
+        System.out.println("Start");
+        for (int i = 0; i < 10; i++) {
+            System.out.println(i + ":" + TicketMaker.getInstance().getNextTicketNumber());
+        }
+        System.out.println("End");
+        assertEquals(1, 1);
+    }
+    @Test
+    public void getID () {
+        System.out.println("Start");
+        for (int i = 0; i < 9; i++) {
+            Triple triple = Triple.getInstance(i % 3);
+            System.out.println(i + ":" + triple);
+        }
+        System.out.println("End");
+        assertEquals(1, 1);
     }
 }
