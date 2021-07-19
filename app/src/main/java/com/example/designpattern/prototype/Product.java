@@ -3,5 +3,5 @@ import java.util.*;
 public interface Product extends Cloneable {
 
 public abstract void use(String s);
-public abstract Product createClone();
+public abstract Product createClone(Product product);
 }

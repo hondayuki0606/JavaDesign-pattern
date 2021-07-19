@@ -15,14 +15,13 @@ public class UnderlinePen implements Product{
         }
         System.out.println("");
     }
-    public Product createClone() {
+    public Product createClone(Product product) {
 
-        Product p = null;
         try {
-            p = (Product)clone();
+            product = (Product)clone();
         }catch (CloneNotSupportedException e) {
             e.printStackTrace();
         }
-        return p;
+        return product;
     }
 }
