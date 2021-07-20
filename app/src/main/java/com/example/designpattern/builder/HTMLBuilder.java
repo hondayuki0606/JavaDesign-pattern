@@ -7,17 +7,18 @@ public class HTMLBuilder extends Builder{
     private PrintWriter writer;
 
     @Override
-    public void makeTitle(String title) {
+    public void buildTitle(String title) {
+
+        writer.println("<html><body>");
+    }
+
+    @Override
+    public void buildString(String str) {
 
     }
 
     @Override
-    public void makeString(String str) {
-
-    }
-
-    @Override
-    public void makeItems(String[] items) {
+    public void buildItems(String[] items) {
 
     }
 

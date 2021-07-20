@@ -4,17 +4,17 @@ public class TextBuilder extends Builder{
 
     private StringBuffer buffer = new StringBuffer();
     @Override
-    public void makeTitle(String title) {
+    public void buildTitle(String title) {
 
     }
 
     @Override
-    public void makeString(String str) {
+    public void buildString(String str) {
 
     }
 
     @Override
-    public void makeItems(String[] items) {
+    public void buildItems(String[] items) {
 
     }
 
