@@ -19,9 +19,13 @@ public abstract class Builder {
             buildItems(items);
         }
     }
-    public abstract void close();
+    public void close(){
+        if (initialize){
+            buildDone();
+        }
+    }
     public abstract void buildTitle(String title);
     public abstract void buildString(String str);
     public abstract void buildItems(String[] items);
-
+    public abstract void buildDone();
 }
