@@ -1,15 +1,22 @@
 package com.example.designpattern.builder;
 
+import java.io.FileWriter;
+import java.io.IOException;
 import java.io.PrintWriter;
 
 public class HTMLBuilder extends Builder{
-    private String fileName;
+    private String filename;
     private PrintWriter writer;
 
     @Override
     public void buildTitle(String title) {
-
-        writer.println("<html><body>");
+        filename = title + ".html";
+        try {
+            writer = new PrintWriter(new FileWriter(filename));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        writer.println("<html><head><title>" + "title" +  "</title></head><>");
     }
 
     @Override
@@ -29,6 +36,6 @@ public class HTMLBuilder extends Builder{
     }
 
     public String getResult(){
-        return fileName;
+        return filename;
     }
 }
