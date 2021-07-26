@@ -30,7 +30,7 @@ public class HTMLBuilder extends Builder{
     }
 
     @Override
-    public void close() {
+    public void buildDone() {
         writer.println("</body></html>");
         writer.close();
     }

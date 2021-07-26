@@ -1,11 +1,21 @@
 package com.example.designpattern.builder;
 
+import java.io.FileWriter;
+import java.io.PrintWriter;
+
 public class TextBuilder extends Builder{
 
-    private StringBuffer buffer = new StringBuffer();
+    private String fileName;
+    private PrintWriter writer;
+
     @Override
     public void buildTitle(String title) {
-
+        fileName = title + ".html";
+        try {
+            writer = new PrintWriter(new FileWriter(fileName));
+        } catch (Exception e){
+            e.printStackTrace();
+        }
     }
 
     @Override
@@ -19,11 +29,11 @@ public class TextBuilder extends Builder{
     }
 
     @Override
-    public void close() {
+    public void buildDone() {
 
     }
 
     public String getResult(){
-        return buffer.toString();
+        return fileName;
     }
 }
