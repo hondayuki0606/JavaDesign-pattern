@@ -3,5 +3,11 @@ package com.example.designpattern.abstractfactory.listfactory;
 import com.example.designpattern.abstractfactory.factory.Link;
 
 public class ListLink extends Link {
-    public 
+    public ListLink(String caption, String url) {
+        super(caption, url);
+    }
+
+    public String makeHTML() {
+        return "   <li><a href=\"" + url + "\">" + caption + "</a></li>\n";
+    }
 }
