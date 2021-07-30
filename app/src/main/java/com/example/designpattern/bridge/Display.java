@@ -6,7 +6,12 @@ public class Display {
         this.impl = impl;
     }
     public void open(){
-        impl.rawOpen()
+        impl.rawOpen();
     }
-
+    public void print(){
+        impl.rawPrint();
+    }
+    public void close(){
+        impl.rawClose();
+    }
 }
