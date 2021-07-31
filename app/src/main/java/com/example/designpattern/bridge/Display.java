@@ -14,4 +14,9 @@ public class Display {
     public void close(){
         impl.rawClose();
     }
+    public final void display() {
+        open();
+        print();
+        close();
+    }
 }
