@@ -34,7 +34,7 @@ public class StrategyTest {
         int speed1 = Integer.parseInt("1");
         int speed2 = Integer.parseInt("2");
         Player player1 = new Player("Taro",new WinningStrategy(speed1));
-        Player player2 = new Player("Taro",new WinningStrategy(speed1));
+        Player player2 = new Player("Taro",new WinningStrategy(speed2));
         for (int i = 0; i < 10000; i++) {
             Hand nextHand1 = player1.nextHand();
             Hand nextHand2 = player2.nextHand();
