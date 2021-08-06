@@ -1,6 +1,7 @@
 package com.example.designpattern.composite;
 
 public abstract class Entry {
+    protected Entry parent;
     public abstract String getName();
     public abstract int getSize();
     public Entry add(Entry entry) throws FileTreatmentException {
